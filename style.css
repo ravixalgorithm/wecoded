@@ -1,0 +1,28 @@
+.bg-gradient {
+    background-image: linear-gradient(to right, #4531EA, #9D00E5);
+}
+.text-transparent {
+    color: transparent;
+    background-clip: text;
+}
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-color: rgba(107, 114, 128, 0.7);
+}
+.article-link {
+    transition: color 0.2s ease;
+}
+.article-link:hover {
+    color: #f5f5f5;
+}
+.tag {
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.tag:hover {
+    background-color: #6b7280;
+    color: #fff;
+}

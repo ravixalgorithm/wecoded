@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeCoded Celebration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS for Styling -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> <!-- GSAP for Animation -->
+    <style>
+        /* Custom styles */
+        .bg-gradient {
+            background-image: linear-gradient(to right, #4531EA, #9D00E5);
+        }
+        .text-transparent {
+            color: transparent;
+            background-clip: text;
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: rgba(107, 114, 128, 0.7);
+        }
+        .article-link {
+            transition: color 0.2s ease;
+        }
+        .article-link:hover {
+            color: #f5f5f5;
+        }
+        .tag {
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .tag:hover {
+            background-color: #6b7280;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-gray-950 font-inter">
+
+    <!-- marquee at the top -->
+    <div class="top-0 left-0 w-full bg-indigo-700 text-white py-1 text-center z-99999999">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+        This website is a submission for the Dev.to challenge (under MIT License) - created with ❤️ by @ravixalgorithm!
+        </marquee>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto px-4 py-8" id="wecoded-page-content">
+        <header class="py-8 flex items-center flex-col">
+            <div class="logo-placeholder w-[25vw] h-[5vw]">
+                <img src="assets/logo.png" class="object-contain" alt="WeCoded Logo">
+            </div>
+            <p class="text-lg sm:text-xl text-gray-300 mt-4" id="wecoded-subtitle">
+                Celebrating Underrepresented Voices in Tech
+            </p>
+        </header>
+
+        <!-- Socials -->
+        <div class="flex justify-center gap-6 mt-8" id="social-links">
+            <a href="https://x.com/ravixalgorithm" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="text-gray-400 hover:text-blue-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter w-6 h-6"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ravixalgorithm/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-blue-700 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin w-6 h-6"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://github.com/ravixalgorithm" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-gray-200 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github w-6 h-6"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.3-.87 2.23a4 4 0 0 1-1.13 1.27V22"></path></svg>
+            </a>
+        </div>
+
+        <!-- Wecoded History -->
+        <section class="mt-20" id="wecoded-history">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white" id="wecoded-history-title">
+                    About WeCoded
+                </h2>
+                <br>
+                <p class="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto" id="wecoded-history-description">
+                    WeCoded is an annual celebration dedicated to highlighting the contributions and stories of underrepresented individuals in the tech industry.  It's a time to amplify voices, share knowledge, and build a more inclusive community.  This initiative was born out of a desire to address the lack of representation and to empower those who are often marginalized in tech spaces.
+                </p>
+            </div>
+        </section>
+
+        <!-- International Women's Day History -->
+        <section class="mt-20" id="iwd-history">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white" id="iwd-history-title">
+                    About International Women's Day
+                </h2>
+                <br>
+                <p class="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto" id="iwd-history-description">
+                    International Women's Day (IWD), celebrated annually on March 8th, is a global day commemorating the cultural, political, and socioeconomic achievements of women.  It is also a focal point in the women's rights movement, bringing attention to issues such as gender equality, reproductive rights, and violence against women. IWD has its roots in labor movements in the early twentieth century in North America and across Europe.
+                </p>
+            </div>
+        </section>
+
+        <!-- Featured Stories -->
+        <section class="mt-20" id="featured-stories">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white flex items-center justify-center gap-3" id="featured-stories-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap w-7 h-7"><polygon points="13 2 3 9 11 12 3 22 13 15 21 22 21 2"></polygon></svg>
+                    Featured Stories
+                </h2>
+                <br>
+                <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto" id="featured-stories-description">
+                    Explore inspiring stories from the WeCoded community. These articles highlight the incredible contributions of underrepresented voices in tech.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-container" data-initial-count="6">
+            </div>
+        </section>
+
+        <!-- Show More Button -->
+        <div id="show-more-button-container" class="text-center"></div>
+
+        <!-- Events (Static) -->
+        <section class="mt-20" id="iwd-events">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white flex items-center justify-center gap-3" id="iwd-events-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar w-7 h-7"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+                    IWD Events
+                </h2>
+                <br>
+                <p class="text-gray-400 text-lg sm:text-xl" id="iwd-events-description">
+                    Find events happening around the world in celebration of International Women's Day. Get involved and show your support!
+                </p>
+            </div>
+            <div class="space-y-8" id="event-items-container">
+                </div>
+        </section>
+
+        <!-- Resources -->
+        <section class="mt-20" id="iwd-resources">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white flex items-center justify-center gap-3" id="iwd-resources-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-book-open w-7 h-7"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path><path d="M12 13h6"></path><path d="M12 17h6"></path></svg>
+                    IWD Resources
+                </h2>
+                <br>
+                <p class="text-gray-400 text-lg sm:text-xl" id="iwd-resources-description">
+                    Learn more about International Women's Day and find valuable resources from organizations supporting women in tech.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="resource-links-container">
+                 </div>
+        </section>
+
+        <!-- Additioaal Resources -->
+         <section class="mt-20" id="additional-resources">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-semibold text-white">Additional Resources</h2>
+                <br>
+                <p class="text-gray-400 text-lg sm:text-xl max-w-3xl mx-auto">
+                    Here are some additional resources that align with the spirit of WeCoded and International Women's Day, promoting inclusivity and empowerment in tech.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-4 rounded-lg bg-gray-900/90 backdrop-blur-md border border-gray-800 hover:shadow-lg transition-all duration-300">
+                    <a href="https://www.womentech.net/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-medium transition-colors block">
+                        Women Who Tech
+                    </a>
+                    <p class="text-gray-300 mt-2 text-sm">A global community empowering women in tech.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-gray-900/90 backdrop-blur-md border border-gray-800 hover:shadow-lg transition-all duration-300">
+                    <a href="https://girlswhocode.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-medium transition-colors block">
+                        Girls Who Code
+                    </a>
+                     <p class="text-gray-300 mt-2 text-sm">Non-profit working to close the gender gap in technology.</p>
+                </div>
+                <div class="p-4 rounded-lg bg-gray-900/90 backdrop-blur-md border border-gray-800 hover:shadow-lg transition-all duration-300">
+                    <a href="https://blackgirlscode.com/" target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 font-medium transition-colors block">
+                        Black Girls Code
+                    </a>
+                    <p class="text-gray-300 mt-2 text-sm">Organization focused on increasing the number of Black women in the digital space.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
